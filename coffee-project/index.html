@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee | Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/take-away.svg" alt="coffee bag and coffe cup" class="header-svg">
+        <h1 class="">BUIO</h1>
+    </header>
+    <div class="main-container">
+        <div class="form-container">
+            <form>
+                <label for="roast-selection">Coffee</label>
+                <select id="roast-selection">
+                    <option>all</option>
+                    <option class="light">Light</option>
+                    <option class="medium">Medium</option>
+                    <option class="dark">Dark</option>
+                </select>
+                <label for="roast-search">Coffee Name</label>
+                <input id="roast-search" onkeyup="searchBar()" type="text">
+                <input id="submit" type="submit" value="Search">
+            </form>
+        </div>      
+        <div id="coffee-card" class="card">
+            <h2 id="coffees" class="coffee-name"></h2>
+            <p id="roast" class="coffee-type"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

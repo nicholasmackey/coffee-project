@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-text: #f0f0f0;
+    --primary: #2a2b29;
+    --secondary: #F29F9B;
+    --light: #E0AC9D;
+    --medium: #A37774;
+    --dark: #484A47;
+    --button: #8b5ae0;
+    --button-hover: #9763f0;
+    --button-padding: 11px 29px;
+    --radius: 8px;
+    --shadow: 0px 3px 15px rgba(0, 0, 0, 0.363);
+  }
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.header-svg {
+    width: 35px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    align-self: center;
+    margin-left: 8px;
+    color: var(--light-text);
+}
+
+.coffee-name {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: -1.2px;
+}
+
+.coffee-type {
+    font-size: 24px;
+    color: var(--button);
+    margin-bottom: 10px;
+}
+
+/* Containers */
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    color: var(--light-text);
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.light {
+    color: var(--light);
+    font-weight: bold;
+}
+
+.medium {
+    color: var(--medium);
+    font-weight: bold;
+}
+
+.dark {
+    color: var(--dark);
+    font-weight: bold;
+}
+
+/* Button Styling */
+
+#submit {
+    padding: var(--button-padding);
+    border-radius: var(--radius);
+    border: none;
+    width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--light-text);
+    background-color: var(--button);
+    margin: 20px auto;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+#submit:hover {
+    transform: scale(1.01);
+    background-color: var(--button-hover);
+}
+
+#submit:active {
+    transform: scale(0.999);
+}
+
+label {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select, input {
+    padding: 5px 20px 5px 2px;
+    font-size: 16px;
+}
