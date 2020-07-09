@@ -66,6 +66,10 @@ h1 {
     flex-direction: row-reverse;
 }
 
+/*.cards{*/
+/*    display: flex;*/
+/*}*/
+
 .coffee-card {
     background-color: var(--light-text);
     width: 200px;
@@ -74,6 +78,7 @@ h1 {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     transition: all 350ms ease-in-out;
+    flex-wrap: wrap;
 }
 
 .coffee-card:hover {
