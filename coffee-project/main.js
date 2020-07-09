@@ -1,10 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = `<div class="coffee">
-                    <h2 class="coffee-name">${coffee.name}</h2>
-                    <p class="coffee-type">${coffee.roast}</p>
-                </div>`;
+    let html = `<div class="coffee coffee-card">
+    <img src="images/beans.jpg" alt="coffee beans" class="beans">
+    <h2 class="coffee-name">${coffee.name}</h2>
+    <p class="coffee-type">${coffee.roast}</p>
+    </div>`;
     return html;
 }
 
