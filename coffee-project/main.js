@@ -1,17 +1,16 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = `<div class="coffee">`;
-    html += `<h2 class="coffee-name">${coffee.name}</h2>`;
-    html += `<p class="coffee-type">${coffee.roast}</p>`;
-    html += `</div>`;
-
+    let html = `<div class="coffee">
+                    <h2 class="coffee-name">${coffee.name}</h2>
+                    <p class="coffee-type">${coffee.roast}</p>
+                </div>`;
     return html;
 }
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = 0; i <= coffees.length - 1; + i++) {
+    for(let i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
