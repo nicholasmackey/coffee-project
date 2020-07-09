@@ -8,6 +8,7 @@
 :root {
     --light-text: #f0f0f0;
     --primary: #2a2b29;
+    --accent: #686868;
     --secondary: #F29F9B;
     --light: #E0AC9D;
     --medium: #A37774;
@@ -51,7 +52,7 @@ h1 {
 
 .coffee-type {
     font-size: 24px;
-    color: var(--button);
+    color: var(--accent);
     margin-bottom: 10px;
 }
 
@@ -61,6 +62,16 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
+}
+
+.coffee-card {
+    background-color: var(--light-text);
+    width: 200px;
+    margin-bottom: 16px;
+}
+
+.beans {
+    width: 100%;
 }
 
 form {
