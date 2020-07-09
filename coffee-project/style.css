@@ -48,12 +48,14 @@ h1 {
     font-weight: 600;
     color: var(--primary);
     letter-spacing: -1.2px;
+    margin-left: 5px;
 }
 
 .coffee-type {
     font-size: 24px;
     color: var(--accent);
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 /* Containers */
@@ -67,11 +69,23 @@ h1 {
 .coffee-card {
     background-color: var(--light-text);
     width: 200px;
+    padding: 10px;
     margin-bottom: 16px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: all 350ms ease-in-out;
+}
+
+.coffee-card:hover {
+    transform: scale(1.05);
+    transform: rotate(1deg,)
 }
 
 .beans {
     width: 100%;
+    border-radius: var(--radius);
+    border: var(--button-hover) 2px solid;
+    transform: rotate(-3deg);
 }
 
 form {
@@ -115,7 +129,7 @@ form {
     color: var(--light-text);
     background-color: var(--button);
     margin: 20px auto;
-    transition: 200ms ease-in-out;
+    transition: 250ms ease-in-out;
     cursor: pointer;
 }
 
