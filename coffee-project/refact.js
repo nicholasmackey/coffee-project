@@ -9,7 +9,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-// const endpoint = 'http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide';
+const endpoint = 'http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide';
 
 function findMatches(wordToMatch, coffees) {
     return coffees.filter(coffee => {
@@ -18,6 +18,17 @@ function findMatches(wordToMatch, coffees) {
         return coffees.name.match(regex) || coffees.roast.match(regex);
     });
 }
+
+function displayMatches() {
+    const matchArray = findMatches(this.value, coffees);
+    console.log(matchArray);
+}
+
+const searchInput = document.querySelector('.search')
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+
 
 let coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
@@ -36,4 +47,5 @@ let coffees = [
     {id: 14, name: 'French', roast: 'Dark'},
 ];
 
+fetch(endpoint).then(data => coffees.push(data))
 const names = coffees.name;
