@@ -17,27 +17,41 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     let selectedRoast = roastSelection.value;
+//     let filteredCoffees = [];
+//     // if (coffeeSearch === '') {
+//     //     if (coffees.roast === selectedRoast) {
+//     //         filteredCoffees.push(coffees[i]);
+//     //     } else if (selectedRoast === 'all') {
+//     //         filteredCoffees.push(coffees[i]);
+//     //     }
+//     // } else {
+//         for (let i = 0; i <= coffees.length - 1; i++) {
+//             if (coffees[i].name.toLowerCase().includes(coffeeSearch.value.toLowerCase())) {
+//                 if (coffees.roast === selectedRoast) {
+//                     filteredCoffees.push(coffees[i]);
+//                 } else if (selectedRoast === 'all') {
+//                     filteredCoffees.push(coffees[i]);
+//                 }
+//             }
+//         }
+//     // }
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    if (coffeeSearch === '') {
-        if (coffees.roast === selectedRoast) {
-            filteredCoffees.push(coffees[i]);
-        } else if (selectedRoast === 'all') {
-            filteredCoffees.push(coffees[i]);
-        }  
-    } else {
-        for (let i = 0; i <= coffees.length - 1; i++) {
-            if (coffees[i].name.toLowerCase().includes(coffeeSearch.value.toLowerCase())) {
-                if (coffees.roast === selectedRoast) {
-                    filteredCoffees.push(coffees[i]);
-                } else if (selectedRoast === 'all') {
-                    filteredCoffees.push(coffees[i]);
-                }
-            }
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all'){
+            filteredCoffees.push(coffee);
         }
-    }
+    });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
